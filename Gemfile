@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.2.2'
 
+gem 'jbuilder'
+gem 'gmaps4rails'
+gem "sinatra-cross_origin", "~> 0.3.1"
+
 # PostgreSQL driver
 gem 'pg'
 
@@ -15,9 +19,9 @@ gem 'rake'
 
 gem 'shotgun'
 
-group :test do
-  gem 'shoulda-matchers'
-  gem 'rack-test'
-  gem 'rspec'
-  gem 'capybara'
-end
+gem 'puma'
+
+gem 'shoulda-matchers', group: [:test]
+gem 'rack-test', group: [:test]
+gem 'rspec', group: [:test]
+gem 'capybara', group: [:test]
