@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 
 gem 'jbuilder'
-gem 'gmaps4rails'
 gem "sinatra-cross_origin", "~> 0.3.1"
 
 # PostgreSQL driver

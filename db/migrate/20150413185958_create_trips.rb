@@ -1,4 +1,4 @@
-class Trip < ActiveRecord::Migration
+class CreateTrips < ActiveRecord::Migration
 	# include ActionView::Helpers::DateHelper
 
   def change

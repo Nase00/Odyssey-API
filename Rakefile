@@ -170,7 +170,7 @@ namespace :pd do
   end
 
   desc "Parse trips data into database"
-  task trips: :environment do
+  task :trips do
     files = [
               File.join("./db/raw/Divvy_Trips_2014-Q1Q2a.csv"),
               File.join("./db/raw/Divvy_Trips_2014-Q1Q2a_2.csv"),

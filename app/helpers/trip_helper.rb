@@ -1,4 +1,4 @@
-module TripHelper
+helpers do
 	def next_trip_params
 		params[:offset].to_i
 	end

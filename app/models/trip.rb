@@ -1,6 +1,4 @@
 class Trip < ActiveRecord::Base
-	# include ActionView::Helpers::DateHelper
-
   validates :trip_id,
 						:start_time,
 						:stop_time,
@@ -16,6 +14,6 @@ class Trip < ActiveRecord::Base
 						numericality: { only_integer: true }
 
 	def duration
-		distance_of_time_in_words(self.trip_duration)
+		self.trip_duration
 	end		
 end
