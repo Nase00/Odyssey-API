@@ -190,6 +190,7 @@ namespace :pd do
             ]
     files.each do |file|
       CSV.foreach(file, headers: true) do |row|
+        puts "--- Loading from #{file} ---"
         Trip.find_or_create_by(
           trip_id: row["trip_id"].to_i,
           start_time: DateTime.strptime(row["starttime"], "%m/%d/%Y %H:%M"),
@@ -205,7 +206,7 @@ namespace :pd do
           birthday: row["birthday"].to_i
         )
       end
-      puts "Completed loading #{file}"
+      puts "=== Completed #{file} ==="
     end
   end
 end

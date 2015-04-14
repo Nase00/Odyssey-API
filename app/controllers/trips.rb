@@ -1,5 +1,4 @@
 get '/trip_for/:bike_id/after/:offset' do
-	trip = Trip.find_by(bike_id: params[:bike_id].to_i)
 	origin_station = Station.find_by(station_id: trip.origin_station_id)
 	destination_station = Station.find_by(station_id: trip.destination_station_id)
 
