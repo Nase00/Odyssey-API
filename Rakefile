@@ -163,7 +163,7 @@ namespace :pd do
           latitude: row["latitude"].to_f,
           longitude: row["longitude"].to_f,
           dpcapacity: row["dpcapacity"].to_i,
-          online_date: Date.strptime(row["online_date"], '%m/%d/%Y')
+          online_date: Date.strptime(row["online_date"], '%m/%d')
         )
       end
     end

@@ -20,7 +20,7 @@ get '/trip_for/:bike_id/after/:offset' do
 			trip_id: trip.trip_id,
 			start_time: trip.start_time,
 			stop_time: trip.stop_time,
-			duration: trip.duration,
+			duration: time_in_words(trip.duration),
 			start_location: origin_station.name,
 			stop_location: destination_station.name
 		}

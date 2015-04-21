@@ -10,4 +10,9 @@ helpers do
 				.order(start_time: :asc)
 				.first
 	end
+
+	def time_in_words(seconds)
+		mm, ss = seconds.divmod(60)
+		"%d minutes, %d seconds" % [mm, ss]
+	end
 end

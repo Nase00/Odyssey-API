@@ -15,5 +15,13 @@ class Trip < ActiveRecord::Base
 
 	def duration
 		self.trip_duration
-	end		
+	end
+
+	def start_time
+		super.strftime("%I:%M%P on %-m/%-d/%y")
+	end
+
+	def stop_time
+		super.strftime("%I:%M%P on %-m/%-d/%y")
+	end
 end
